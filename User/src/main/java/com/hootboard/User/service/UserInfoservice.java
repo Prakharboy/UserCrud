@@ -11,10 +11,12 @@ public interface UserInfoservice {
 
 	public List<UserInfo> getAllUsers();
 
-	public String deleteUser(int userId);
+	public String deleteUser(Long userId);
 
-	public UserInfo getUserById(int userId);
+	public UserInfo getUserById(Long userId);
 
-	public int saveOrUpdateUser(UserInfo userInfo);
+	public UserInfo saveUser(UserInfo userInfo);
+	
+	public UserInfo updateUser(UserInfo userInfo);
 
 }

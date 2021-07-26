@@ -1,0 +1,206 @@
+{
+	"id": "3e18280f-d18d-72e5-cb81-54ac42e2ef25",
+	"name": "UserInfo",
+	"description": "",
+	"order": [
+		"721585cc-f21f-2e95-c115-9bee83048490",
+		"aa9a2713-2222-dd2c-d32b-80ebf1914be4",
+		"1535131e-1aa9-7e0d-f021-5dc83d5e011d",
+		"f844628a-a4ee-9747-894b-767546ad71d3",
+		"6d2787b7-0ca7-300d-a723-b2275c38a28d",
+		"2d458048-94b2-9537-74ec-c9f128f7c6be"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1626900797808,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "1535131e-1aa9-7e0d-f021-5dc83d5e011d",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob290Ym9hcmQiLCJleHAiOjE2MjcyNjA5NzUsImlhdCI6MTYyNzI0Mjk3NX0.v2flhR1FnGzFy_vdyKU_jYPi1dAEXB4q0qneazGFadsW_gzkIUsSRcrcqTjtPEF5fQFjziEpCxIqJz0dNHZyPA\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob290Ym9hcmQiLCJleHAiOjE2MjcyNjA5NzUsImlhdCI6MTYyNzI0Mjk3NX0.v2flhR1FnGzFy_vdyKU_jYPi1dAEXB4q0qneazGFadsW_gzkIUsSRcrcqTjtPEF5fQFjziEpCxIqJz0dNHZyPA",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/v1/getUserInfo/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1627298148376,
+			"name": "get user by id",
+			"description": "",
+			"collectionId": "3e18280f-d18d-72e5-cb81-54ac42e2ef25",
+			"responses": []
+		},
+		{
+			"id": "2d458048-94b2-9537-74ec-c9f128f7c6be",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/authenticate",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1627298012322,
+			"name": "LOGIN",
+			"description": "",
+			"collectionId": "3e18280f-d18d-72e5-cb81-54ac42e2ef25",
+			"responses": [],
+			"rawModeData": "{\n\"username\":\"hootboard\",\n\"password\":\"password\"\n\n}"
+		},
+		{
+			"id": "6d2787b7-0ca7-300d-a723-b2275c38a28d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/v1/updateUserInfo",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1627298166813,
+			"name": "update UserInfo",
+			"description": "",
+			"collectionId": "3e18280f-d18d-72e5-cb81-54ac42e2ef25",
+			"responses": [],
+			"rawModeData": "{\n\"id\":1,\n\"firstName\": \"Kabir\",\n\"lastName\":\"Banjpai\",\n\"emailList\":[\"a@hootboard.com\",\"b@hootboard.com\"\n\t\n\t],\n\t\"addressList\":[{\n\t\t\n\t\t\"addressLine1\":\"add1\",\n\t\t\"addressLine2\":\"add2\",\n\t\t\"city\":\"ny\",\n\t\t\"state\":\"ny\",\n\t\t\"zipcode\":\"232323\",\n\t\t\"country\":\"us\"\n\t},\n\t{\n\t\t\n\t\t\"addressLine1\":\"add2\",\n\t\t\"addressLine2\":\"add2\",\n\t\t\"city\":\"ny\",\n\t\t\"state\":\"ny\",\n\t\t\"zipcode\":\"232323\",\n\t\t\"country\":\"us\"\n\t}\n\t\t\n\t\t\n\t\t]\n\t\n\t\n}"
+		},
+		{
+			"id": "721585cc-f21f-2e95-c115-9bee83048490",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob290Ym9hcmQiLCJleHAiOjE2MjczMDY1NjksImlhdCI6MTYyNzI4ODU2OX0.wbevmpBon5dXMYmbh2QE5njz-VWOCbdK2a5nDxRuatGh00s1HsNSzGyRHSIptZcHR9FBm-ClK9OAxfcvOrhQRw\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob290Ym9hcmQiLCJleHAiOjE2MjczMDY1NjksImlhdCI6MTYyNzI4ODU2OX0.wbevmpBon5dXMYmbh2QE5njz-VWOCbdK2a5nDxRuatGh00s1HsNSzGyRHSIptZcHR9FBm-ClK9OAxfcvOrhQRw",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/v1/saveUserInfo",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1627297994744,
+			"name": "saveUserInfo",
+			"description": "",
+			"collectionId": "3e18280f-d18d-72e5-cb81-54ac42e2ef25",
+			"responses": [],
+			"rawModeData": "{\n\"firstName\": \"prakhar\",\n\"lastName\":\"Banjpai\",\n\"emailList\":[\"a@hootboard.com\",\"b@hootboard.com\"\n\t\n\t],\n\t\"addressList\":[{\n\t\t\n\t\t\"addressLine1\":\"add1\",\n\t\t\"addressLine2\":\"add2\",\n\t\t\"city\":\"ny\",\n\t\t\"state\":\"ny\",\n\t\t\"zipcode\":\"232323\",\n\t\t\"country\":\"us\"\n\t},\n\t{\n\t\t\n\t\t\"addressLine1\":\"add2\",\n\t\t\"addressLine2\":\"add2\",\n\t\t\"city\":\"ny\",\n\t\t\"state\":\"ny\",\n\t\t\"zipcode\":\"232323\",\n\t\t\"country\":\"us\"\n\t}\n\t\t\n\t\t\n\t\t]\n\t\n\t\n}\n"
+		},
+		{
+			"id": "aa9a2713-2222-dd2c-d32b-80ebf1914be4",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob290Ym9hcmQiLCJleHAiOjE2MjczMjU1ODMsImlhdCI6MTYyNzMwNzU4M30.pCL2QC92i7Zp82rPNx08nG6OubXMAb4o8bEPDdUoS6eSkAwvl3RP5Ofzhfn9nq9eUAfRxF8D2IsqpkhLQ3IcPw\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob290Ym9hcmQiLCJleHAiOjE2MjczMjU1ODMsImlhdCI6MTYyNzMwNzU4M30.pCL2QC92i7Zp82rPNx08nG6OubXMAb4o8bEPDdUoS6eSkAwvl3RP5Ofzhfn9nq9eUAfRxF8D2IsqpkhLQ3IcPw",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/v1/getAllUsers",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1627307704539,
+			"name": "get users",
+			"description": "",
+			"collectionId": "3e18280f-d18d-72e5-cb81-54ac42e2ef25",
+			"responses": []
+		},
+		{
+			"id": "f844628a-a4ee-9747-894b-767546ad71d3",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob290Ym9hcmQiLCJleHAiOjE2MjczMjU1ODMsImlhdCI6MTYyNzMwNzU4M30.pCL2QC92i7Zp82rPNx08nG6OubXMAb4o8bEPDdUoS6eSkAwvl3RP5Ofzhfn9nq9eUAfRxF8D2IsqpkhLQ3IcPw\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJob290Ym9hcmQiLCJleHAiOjE2MjczMjU1ODMsImlhdCI6MTYyNzMwNzU4M30.pCL2QC92i7Zp82rPNx08nG6OubXMAb4o8bEPDdUoS6eSkAwvl3RP5Ofzhfn9nq9eUAfRxF8D2IsqpkhLQ3IcPw",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/v1/deleteUserInfo?userId=1",
+			"queryParams": [
+				{
+					"key": "userId",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1627307674923,
+			"name": "delete user by id",
+			"description": "",
+			"collectionId": "3e18280f-d18d-72e5-cb81-54ac42e2ef25",
+			"responses": []
+		}
+	]
+}

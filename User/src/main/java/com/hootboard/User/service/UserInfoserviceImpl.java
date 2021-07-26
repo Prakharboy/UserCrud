@@ -2,6 +2,7 @@ package com.hootboard.User.service;
 
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,23 +21,32 @@ public class UserInfoserviceImpl implements UserInfoservice {
 		return userInfoRepository.findAll();
 	}
 
-	public String deleteUser(int userId) {
-		if(userInfoRepository.findById((long) userId).isPresent())
-		userInfoRepository.deleteById((long) userId);
-		return "success";
+	public String deleteUser(Long userId) {
+		if(userInfoRepository.findById(userId).isPresent())
+		{userInfoRepository.deleteById((long) userId);
+		return "success";}
+		throw new NoSuchElementException("No such User");
 		
 	}
 
-	public UserInfo getUserById(int userId) {
-		return userInfoRepository.findById((long) userId).get();
-		
-	}
-
-	public int saveOrUpdateUser(UserInfo userInfo) {
-		if(userInfoRepository.save(userInfo)!=null)
-			return 0;
+	public UserInfo getUserById(Long userId) {
+		if(userInfoRepository.findById(userId).isPresent())
+		return userInfoRepository.findById(userId).get();
 		else
-			return 1;
+			throw new NoSuchElementException("No such User");
+			
+		
+	}
+
+	public UserInfo saveUser(UserInfo userInfo) {
+		return userInfoRepository.save(userInfo);
+		
+	}
+	public UserInfo updateUser(UserInfo userInfo) {
+		if(userInfoRepository.findById(userInfo.getId()).isPresent())
+			return userInfoRepository.save(userInfo);
+		else
+			throw new NoSuchElementException("No such User");
 		
 	}
 

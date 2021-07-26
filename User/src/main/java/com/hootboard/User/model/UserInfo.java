@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.hootboard.User.exceptions.EmptyInputException;
+
 @Entity
 @Table
 public class UserInfo {
@@ -72,10 +74,40 @@ public class UserInfo {
 	
 
 
+public boolean validate() throws EmptyInputException
+{
+	try{
+		if(this.getFirstName()!=null)
+		return true;
+		else
+			throw new EmptyInputException("first name should not be null");
+			
+	}
+	catch(Exception e)
+	{
+		throw new EmptyInputException("first name should not be null");
+	}
+
+	
+}
+
+public boolean validateUpdate() throws EmptyInputException
+{
+	try{
+		if(this.getId()!=null)
+		return true;
+		else
+			throw new EmptyInputException("Id should not be null");
+			
+	}
+	catch(Exception e)
+	{
+		throw new EmptyInputException("Id should not be null");
+	}
 
 
 	
-
+}
 
 
 	
